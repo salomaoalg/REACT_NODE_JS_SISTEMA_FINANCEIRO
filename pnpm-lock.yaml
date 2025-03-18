@@ -35,9 +35,6 @@ importers:
       postgres:
         specifier: ^3.4.5
         version: 3.4.5
-      react:
-        specifier: latest
-        version: 19.0.0
       react-dom:
         specifier: latest
         version: 19.0.0(react@19.0.0)
