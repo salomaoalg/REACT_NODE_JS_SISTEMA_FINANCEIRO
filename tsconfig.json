@@ -20,8 +20,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/app/*": ["app/*"],
-      salomaos-projects-1396da6d/react-node-js-sistema-financeiro
+      "@/app/*": ["app/*"]
     }
   },
   "include": [
