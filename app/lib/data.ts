@@ -1,4 +1,5 @@
 import postgres from 'postgres';
+
 import {
   CustomerField,
   CustomersTableType,
@@ -6,10 +7,13 @@ import {
   InvoicesTable,
   LatestInvoiceRaw,
   Revenue,
+  
 } from './definitions';
 import { formatCurrency } from './utils';
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+const invoiceCountPromise = sql`SELECT COUNT(*) FROM invoices`;
+const customerCountPromise = sql`SELECT COUNT(*) FROM customers`;
 
 export async function fetchRevenue() {
   try {
